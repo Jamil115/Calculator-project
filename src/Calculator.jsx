@@ -280,6 +280,10 @@ export default function Calculator() {
                         stack.push(a/b);
                         break
 
+                    case '%':
+                        stack.push(a%b);
+                        break
+
                     default:
                         break;
                 }
@@ -322,7 +326,7 @@ export default function Calculator() {
         setInput(0)
         let newInput=0
         let number = parseFloat(data)
-        // console.log(number)
+        console.log(number)
         // console.log(typeof(number))
 
         for(let i=1; i<=number; i++){
@@ -352,7 +356,7 @@ export default function Calculator() {
                 
             })
         }
-        if(input==0){
+        if(input==0 && data==0){
             setInput((prevInput)=>{
                 let newInput = prevInput+1
                 setShow(`fact(${input})`)
